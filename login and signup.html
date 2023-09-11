@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            height: 97vh;
+            background-color: rgb(7, 134, 156);
+        }
+        .parent{
+            position: relative;
+            background-color: white;
+            width: 300px;
+            min-height: 200px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            /* border: 1px solid black; */
+            box-shadow: 5px 5px 5px #c2bcbc,
+  -5px -5px 5px #fffafa;
+  
+        }
+        #signup{
+            display: none;
+        }
+
+        #SignupBtn{
+            width: 110px;
+            font-size: 17px;
+            background-color: transparent;
+            border: transparent;
+            padding: 10px 20px 10px 20px;
+        }
+        #LoginBtn{
+            width: 106px;
+            font-size: 17px;
+            border: transparent;
+            background-color: transparent;
+            padding: 10px 20px 10px 20px;
+        }
+        .sign-btn{
+            width: 100%;
+            border-radius: 10px;
+            /* border: 1px solid black; */
+            box-shadow: 5px 5px 5px #90d4c6,
+            -5px -5px 5px #90d4c6;
+  
+        }
+        input[type=text], input[type=email], input[type=password]{
+            width: 250px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 2px solid gray;
+            padding: 10px 20px 10px 20px;
+        }
+        #submit{
+            width: 100%;
+            font-size: 17px;
+            border-radius: 10px;
+            border: none;
+            padding: 10px 20px 10px 20px;
+            box-shadow: 5px 5px 5px #c2bcbc,
+            -5px -5px 5px #c2bcbc; 
+        }
+        a{
+            color: darkcyan;
+        }
+        a>p{
+            text-align: left;
+        }
+        .checkbox{
+            text-align: left;
+            width: 100%;
+        }
+        .fa {
+            padding: 12px;
+            font-size: 12px;
+            width: 12px;
+            text-align: center;
+            text-decoration: none;
+            margin: -5px 3px;
+            border-radius: 50%;
+        }
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-google {
+        background: #dd4b39;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+        <div class="parent">
+            <div class="sign-btn">
+            <button id="LoginBtn">Log-In</button>
+            <button id="SignupBtn">Sign-Up</button>
+        </div>
+        
+        <form id="signup">
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="first name" required><br><br> 
+        <input type="text" placeholder="last name" required><br><br> 
+        <input type="email" placeholder="email" required><br><br> 
+        <input type="password" placeholder="password" required><br><br>
+        <input type="password" placeholder="confirm password" required><br><br>
+        <input type="checkbox"><span>I Agree to The Term & Condition</span> <br> <br>
+        <button id="submit">Register</button>
+        <p>Already have Account? <a href="#">Sign-In Now</a></p><hr>
+        <p>Or Login With</p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        </form>
+        
+        <form id="login">
+        <h2>Log in</h2>
+        <input type="email" placeholder="email" required><br><br>
+        <input type="password" placeholder="password" required><br><br>
+        <div class="checkbox"><input type="checkbox"><span>Remember Password</span>
+        <a href="#"><p>Forgot Password?</p></a></div>
+        <button id="submit">Login</button>
+        <p>Create an Account? <a href="#">Signup Now</a></p><hr>
+        <p>Or Login With</p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        </form>
+    </div>
+
+
+
+        <script>
+            $(document).ready(()=>{
+                $("#SignupBtn").click(()=>{ 
+                    $("#signup").slideDown(); 
+                    $("#login").slideUp();
+            })
+                $("#LoginBtn").click(()=>{ 
+                    $("#login").slideDown(); 
+                    $("#signup").slideUp();
+            })
+            })
+        </script>
+
+
+
+</body>
+</html>
